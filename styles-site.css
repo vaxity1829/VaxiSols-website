@@ -1,47 +1,53 @@
 .site-topbar {
   position: sticky;
-  top: 10px;
+  top: 6px;
   z-index: 100;
-  margin: 10px;
+  margin: 6px 8px;
 }
 
 .site-topbar-inner {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  gap: 14px;
+  gap: 10px;
   align-items: center;
-  padding: 10px 14px;
+  padding: 7px 11px;
 }
 
 .site-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .site-brand img {
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
+}
+
+.site-brand-text .brand-wordmark {
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
 }
 
 .site-brand-text p {
   margin: 0;
   color: var(--mui-text-secondary);
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .site-nav {
   display: flex;
   justify-content: center;
-  gap: 14px;
+  gap: 6px;
   flex-wrap: wrap;
 }
 
 .site-nav a {
   color: var(--mui-text-secondary);
   text-decoration: none;
-  padding: 6px 10px;
+  padding: 4px 7px;
+  font-size: 13px;
   border-radius: var(--mui-radius-sm);
   position: relative;
   transition: background .32s var(--mui-ease), color .32s var(--mui-ease), transform .32s var(--mui-ease), box-shadow .32s var(--mui-ease);
@@ -82,7 +88,7 @@
 
 .site-top-actions {
   display: flex;
-  gap: 8px;
+  gap: 6px;
   align-items: center;
 }
 
@@ -102,13 +108,13 @@
 }
 
 .site-main.MuiContainer-root {
-  padding-left: max(24px, env(safe-area-inset-left));
-  padding-right: max(24px, env(safe-area-inset-right));
-  padding-bottom: max(24px, env(safe-area-inset-bottom));
+  padding-left: max(16px, env(safe-area-inset-left));
+  padding-right: max(16px, env(safe-area-inset-right));
+  padding-bottom: max(16px, env(safe-area-inset-bottom));
 }
 
 .site-main > .MuiCard-root {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 88px;
 }
 
 .site-hero .site-hero-avatar.MuiCardHeader-avatar {
@@ -130,10 +136,10 @@
 }
 
 .info-list p {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   color: var(--mui-text-secondary);
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 .info-subhead {
@@ -254,15 +260,22 @@
 
 .site-lead {
   color: var(--mui-text-secondary);
-  font-size: 15px;
-  margin-bottom: 14px;
-  max-width: 760px;
+  font-size: 14px;
+  margin-bottom: 12px;
+  max-width: 720px;
 }
 
 .site-cta {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   flex-wrap: wrap;
+}
+
+.site-cta .MuiButton-root.site-btn-link {
+  padding: 6px 14px;
+  min-height: 36px;
+  font-size: 0.78rem;
+  min-width: 0;
 }
 
 .site-btn-link {
@@ -372,6 +385,77 @@
 
 .site-theme-toggle {
   border: 1px solid var(--mui-divider);
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  padding: 4px;
+}
+
+.site-theme-toggle .material-icons {
+  font-size: 18px;
+}
+
+@media (min-width: 721px) {
+  .site-top-actions .MuiButton-root.site-btn-link {
+    padding: 5px 12px;
+    min-height: 34px;
+    min-width: 0;
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+  }
+}
+
+/* Main guide sections only — keep #app-clone preview at full MUI scale */
+.site-main > .MuiCard-root:not(#app-clone) .MuiCardHeader-root {
+  padding: 11px 14px;
+  gap: 12px;
+}
+
+.site-main > .MuiCard-root:not(#app-clone) .MuiCardHeader-avatar {
+  width: 34px;
+  height: 34px;
+  font-size: 18px !important;
+}
+
+.site-main > .MuiCard-root:not(#app-clone) .MuiCardHeader-title {
+  font-size: 15px;
+}
+
+.site-main > .MuiCard-root:not(#app-clone) .MuiCardHeader-subheader {
+  font-size: 11px;
+  margin-top: 1px;
+}
+
+.site-main > .MuiCard-root:not(#app-clone) .MuiCardContent-root {
+  padding: 12px 14px;
+}
+
+.site-hero .MuiCardHeader-title.brand-wordmark {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.site-hero .site-hero-avatar.MuiCardHeader-avatar {
+  width: 34px;
+  height: 34px;
+}
+
+.site-main > .MuiCard-root:not(#app-clone) .MuiChip-card {
+  padding: 11px 14px;
+  gap: 10px;
+}
+
+.site-main > .MuiCard-root:not(#app-clone) .MuiChip-card .material-icons.MuiChip-icon {
+  font-size: 22px !important;
+}
+
+.site-main > .MuiCard-root:not(#app-clone) .MuiChip-label {
+  font-size: 10px;
+}
+
+.site-main > .MuiCard-root:not(#app-clone) .MuiChip-value {
+  font-size: 13px;
 }
 
 .clone-layout .MuiDrawer-paper .MuiListItem-root {
